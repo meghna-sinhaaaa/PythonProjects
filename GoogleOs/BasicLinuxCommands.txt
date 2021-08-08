@@ -1,0 +1,65 @@
+mkdir --> to create new directory
+cd --> to change into directory
+pwd --> print current working directory
+cp --> copy the file (cp ../spider.txt .)
+touch --> create empty file
+ls --> contents of the directory
+ls -l --> more information
+ls -la --> shows hidden files
+mv --> move a file / rename (mv myfile.txt emptyfile.txt)
+rm * --> delete all files in directory
+cd .. --> change to previous deirectory
+rmdir --> delete empty directory
+man --> manual for all the commands 
+tr --> translates character from first parameter to second parameter (tr ' ' '\n')
+sort --> sort results alphabetically
+uniq --> disaplys each match once
+uniq -c --> prints each line with the number of times it occured
+sort -nr --> sorts results numerically
+head --> prints the first 10 lines to stdout
+ps --> lists currently running processes
+ps ax --> all runnning processes
+date --> prints the current date
+who --> prints the list of users currently logged into the computer
+uptime --> shows how long the computer has been running
+free --> shows the amount of unused memory on the current system 
+------------------------------------------------------------------------------------------------
+REDIRECTING STREAMS (IO):
+>> python stdout_ex.py > newfile.txt --> output will be redirected to the file ,
+											the destination is overwritten
+   python stdout_ex.py >> newfile.txt --> will append		
+   
+>> python stream_input.py < newfile.txt --> stdin will read only till the new
+											line character
+
+>> python stream_input.py < newfile.txt 2> error_file.txt
+	--> will redirect error to second file, "2" is called file descriptor
+	0,1 - for stdin and stdout
+	2 - stderr
+	
+echo --> to print (echo "yo ssup" > newtextfile.txt)
+
+-------------------------------------------------------------------------------------
+
+PIPES: ( | )
+--> connect output of one program to input of another
+ls -l | less
+cat spider.txt | tr ' ' '\n' | sort | uniq -c | sort -nr | head
+-------------------------------------------------------------------------------------
+
+SIGNAL :
+
+ex : ping commands
+ctrl + c --> exits (SIGINT)
+ctril+z --> stops (SIGSTOP) and 'fg' --> resumes
+kill --> SIGTERM with PID
+
+ps ax | grep ping --> find pid of ping and kill 4619
+
+------------------------------------------------------------------------------------
+
+GLOBS:
+
+echo *.py --> will list all file names with .py
+echo c*.py --> all files which start with letter c*
+echo ?????.py --> file names with 5 characters
