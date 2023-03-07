@@ -1,7 +1,7 @@
 from login import *
 
 if __name__ == "__main__":
-    credential_file = os.getcwd()+"/resources/credentials.json"
+    credential_file = os.getcwd()+"/rAesources/credentials.json"
     gc = login(credential_file)
     file_url = input("Enter google sheet url: ")
     # file_url = "https://docs.google.com/spreadsheets/d/1Jt31sT87_yoKuOQkasf71tCUZnBRz88_3kcAc7ojQco/"
