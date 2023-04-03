@@ -1,4 +1,4 @@
-from login import *
+from GoogleSheetsAPI.login import *
 
 if __name__ == "__main__":
     credential_file = os.getcwd()+"/rAesources/credentials.json"
